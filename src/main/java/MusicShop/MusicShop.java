@@ -9,7 +9,7 @@ public class MusicShop {
     private String name;
     private ArrayList<ISell> stock;
 
-    public MusicShop(String name, ArrayList<ISell> stock) {
+    public MusicShop(String name) {
         this.name = "hobgoblin music";
         this.stock = new ArrayList<>();
     }
@@ -18,7 +18,20 @@ public class MusicShop {
         return name;
     }
 
-    public int getStock() {
-        return this.stock.size();
+    public ArrayList<ISell> getStock() {
+        return stock;
     }
+
+    public int countStock() {
+        return stock.size();
+    }
+
+    public void addToStock(ISell stockItem) {
+        this.stock.add(stockItem);
+    }
+
+    public void removeFromStock(ISell stockItem) {
+        this.stock.remove(stockItem);
+    }
+
 }
