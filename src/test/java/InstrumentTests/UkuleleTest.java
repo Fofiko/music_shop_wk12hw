@@ -1,3 +1,5 @@
+package InstrumentTests;
+
 import MusicShop.Instruments.InstrumentType;
 import MusicShop.Instruments.Ukulele;
 import org.junit.Before;
@@ -27,6 +29,12 @@ public class UkuleleTest {
     @Test
     public void hasSellingPrice(){
         assertEquals(32.00, ukulele.getSellingPrice(), 0.01);
+    }
+
+    @Test
+    public void canChangeSellingPrice(){
+        ukulele.setSellingPrice(55.55);
+        assertEquals(55.55, ukulele.getSellingPrice(), 0.01);
     }
 
     @Test

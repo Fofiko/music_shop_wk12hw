@@ -1,3 +1,5 @@
+package InstrumentTests;
+
 import MusicShop.Instruments.Bagpipe;
 import MusicShop.Instruments.InstrumentType;
 import org.junit.Before;
@@ -27,6 +29,12 @@ public class BagpipeTest {
     @Test
     public void hasSellingPrice(){
         assertEquals(50.00, bagpipe.getSellingPrice(), 0.01);
+    }
+
+    @Test
+    public void canChangeSellingPrice(){
+        bagpipe.setSellingPrice(55.55);
+        assertEquals(55.55, bagpipe.getSellingPrice(), 0.01);
     }
 
     @Test

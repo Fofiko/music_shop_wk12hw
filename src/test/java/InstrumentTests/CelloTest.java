@@ -1,3 +1,5 @@
+package InstrumentTests;
+
 import MusicShop.Instruments.Cello;
 import MusicShop.Instruments.InstrumentType;
 import org.junit.Before;
@@ -27,6 +29,12 @@ public class CelloTest {
     @Test
     public void hasSellingPrice(){
         assertEquals(20.00, cello.getSellingPrice(), 0.01);
+    }
+
+    @Test
+    public void canChangeSellingPrice(){
+        cello.setSellingPrice(55.55);
+        assertEquals(55.55, cello.getSellingPrice(), 0.01);
     }
 
     @Test

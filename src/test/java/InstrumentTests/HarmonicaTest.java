@@ -1,3 +1,5 @@
+package InstrumentTests;
+
 import MusicShop.Instruments.Harmonica;
 import MusicShop.Instruments.InstrumentType;
 import org.junit.Before;
@@ -27,6 +29,12 @@ public class HarmonicaTest {
     @Test
     public void hasSellingPrice(){
         assertEquals(10.00, harmonica.getSellingPrice(), 0.01);
+    }
+
+    @Test
+    public void canChangeSellingPrice(){
+        harmonica.setSellingPrice(55.55);
+        assertEquals(55.55, harmonica.getSellingPrice(), 0.01);
     }
 
     @Test
