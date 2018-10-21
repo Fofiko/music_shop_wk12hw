@@ -34,4 +34,12 @@ public class MusicShop {
         this.stock.remove(stockItem);
     }
 
+
+    public double getStockMarkup() {
+        double stockMarkup = 0;
+        for (ISell stockItem : stock) {
+            stockMarkup += stockItem.calculateMarkup();
+        }
+        return stockMarkup;
+    }
 }

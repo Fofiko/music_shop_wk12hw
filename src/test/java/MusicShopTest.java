@@ -54,6 +54,12 @@ public class MusicShopTest {
         assertEquals(1, musicShop.countStock());
     }
 
-
+    @Test
+    public void calculateTotalStockMarkup(){
+        musicShop.addToStock(ukulele);
+        musicShop.addToStock(bagpipe);
+        musicShop.addToStock(metronome);
+        assertEquals(60.00, musicShop.getStockMarkup(), 0.10);
+    }
 
 }
