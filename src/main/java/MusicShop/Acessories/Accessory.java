@@ -34,4 +34,6 @@ public abstract class Accessory implements ISell {
     public double calculateMarkup() {
         return this.sellingPrice - this.buyingPrice;
     }
+
+
 }

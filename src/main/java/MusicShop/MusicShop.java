@@ -1,8 +1,13 @@
 package MusicShop;
 
 import MusicShop.Interfaces.ISell;
+import javafx.collections.transformation.SortedList;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
+import static java.util.Collections.sort;
 
 public class MusicShop {
 
@@ -42,4 +47,12 @@ public class MusicShop {
         }
         return stockMarkup;
     }
+
+
+    public void sortStockByItem(){
+        Collections.sort(stock, new PriceComparator());
+    }
+
+
+
 }

@@ -1,8 +1,11 @@
 package MusicShop.Interfaces;
 
+import java.util.Comparator;
+
 public interface ISell {
 
-    public double calculateMarkup();
+    double calculateMarkup();
+    double getSellingPrice();
 }
 
 
